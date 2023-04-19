@@ -2,11 +2,15 @@
 import Title  from './Title/index.vue';
 import Text from './Text.vue';
 import Button from './Button.vue';
+import CardSmall from './CardSmall.vue'
+import Stack from './Stack.vue';
 export default({
     components:{
     Title,
     Text,
     Button,
+    CardSmall,
+    Stack
     }
 })
 
@@ -29,4 +33,20 @@ Lorem, ipsum dolor.
         <Button>press me</Button>
         <Button variant="stroke">press me</Button>
  </div>
+
+
+ <Stack style="padding: 5px;" spacing="10px" dir="row">
+
+ <CardSmall
+    layout="horizontal"
+    title="Фото"
+    img="/icons/Camera.svg"
+/>
+ <CardSmall
+    layout="horizontal"
+    title="Фото"
+    img="/icons/Camera.svg"
+/>
+
+ </Stack>
 </template>

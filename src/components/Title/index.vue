@@ -32,6 +32,8 @@ h3
     font-size: 24px
 h4
     font-size: 18px
+h5
+    font-size: 16px
 
 </style>
 <template>

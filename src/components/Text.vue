@@ -13,7 +13,7 @@ export default({
             type:String,
             default:'#212B36'
         },
-        color:{
+        fontSize:{
             type:String,
             default:'14px'
         },
@@ -37,6 +37,20 @@ export default({
                 marginBottom:this.my
             }
         }
+    },
+    computed:{
+        classObj(){
+            return{
+                text:this.type.includes('h')!=true,
+                secondary:this.color=='secondary',
+                white:this.color=='white',
+                voilet:this.color=='voilet',
+                primary:this.color=='primary',
+                regular:this.weight=='regular',
+                medium:this.weight=='medium',
+                bold:this.weight=='bold'
+            }
+        }
     }
 })
 </script>
@@ -45,18 +59,40 @@ export default({
 .text
     display: block
     font-size: 14px
+.primary
     color: $txt
-    
+.white
+    color:$white
+.violet
+    color: $violet
+.secondary
+    color: $grey
 .regular
     font-family: $text-Regular
 .medium
     font-family: $text-Medium
+.bold
+    font-family: $text-Bold
 strong,b
     font-family: $text-Bold
+.title
+    font-family: "Onest",sans-serif
+    line-height: 1.3
+    color: $txt
+h1
+    font-size: 48px
+h2
+    font-size: 36px
+h3
+    font-size: 24px
+h4
+    font-size: 18px
+h5
+    font-size: 16px
 </style>
 
 <template>
-    <component :is="this.type" :class="['text',this.weight]" style="{{this.styles}}">
+    <component :is="this.type" :class="classObj" style="{{this.styles}}">
     <slot/>
     </component>
    
