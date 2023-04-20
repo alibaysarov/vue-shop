@@ -2,35 +2,34 @@
 import Lib from './components/Lib.vue';
 import Text from './components/Text.vue';
 import NavMenu from './components/NavMenu.vue';
+import Header from './components/Header.vue';
 export default({
   components:{
   Lib,
   Text,
-  NavMenu
+  NavMenu,
+  Header
   }
 })
 
 </script>
 <style lang="sass">
 .wrapper
-  display: flex
-
+ display: grid
+ grid-template-columns: minmax(auto,25%) 1fr
 .container
   width: 100%
-  
-  max-width: 1640px
-  margin: 0 auto
+  // max-width: 1330px
+
   
 </style>
 <template>
-  <div class="wrapper">
-    <NavMenu/>
+  
+<NavMenu/>
  <div class="container">
-  <Text type="h2" color="primary">Пакеты</Text>
+    <Header/>
  </div>
 
-
-  </div>
  
 </template>
 

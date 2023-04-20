@@ -21,7 +21,8 @@
 </script>
 
 <style lang="sass">
-
+.list
+    padding-left: 0px
 </style>
 <template>
     <div class="listContent">

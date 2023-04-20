@@ -109,13 +109,12 @@ export default({
 <style lang="sass">
 .navMenu
   background-color: $violet
-  width: 100%
-  min-width: 280px
-  max-width: 280px
+  
   height: 100%
   min-height: 1200px
   padding: 16px
   overflow: auto
+ 
   .logo
     padding-top: 12px
     padding-bottom: 22px
